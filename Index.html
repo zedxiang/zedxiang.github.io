@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>CV de Zoran Tauvry</title>
+    <style>
+/*STYLES GENERAUX*/
+*{
+    font-family: Avenir, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    text-align: justify;
+    box-sizing: border-box;
+}
+body{
+    background: #ffffff00;
+}
+p{
+    font-size: 1em;
+    line-height: 1.5em;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/*HEADER & FOOTER*/
+header, footer{
+    width: 100%;
+    padding: 20px 0px;
+    background:  #4f4f4f;
+    box-shadow: 0px 0px 15px #ffffff;
+}
+header{
+    border-bottom: 2px solid #ffffff;
+    height: 120px;
+}
+header h1{
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+    width: 90%;
+    margin: 0 auto;
+}
+
+footer{
+    border-top: 2px solid #fff;
+}
+footer p{
+    width: 90%;
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+}
+footer a{
+    color: #fff;
+}
+
+/*SECTIONS*/
+section{
+    display: flex; 
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 20px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 10px #ffffff;
+    background-color: #ffffff;
+}
+
+section h2{
+    margin: 20px 0;
+    width: 90%;
+}
+section > div{
+    width: 90%;
+}
+
+/*SECTION INFOS*/
+.photo{
+    text-align: center;
+}
+.photo img{
+    width: 150px;
+    height: 150px;
+    border: 3px solid #fff;
+    box-shadow: 0px 0px 10px #777;
+    border-radius: 50%;
+    margin-top: -80px;
+}
+.prez{
+    border-bottom: 2px dashed #ccc;
+}
+.prez a{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto 30px auto;
+    color: #fff;
+    background-color: #EA0;
+    box-shadow: 0px 0px 10px #ccc;
+    border-radius: 5px;
+}
+.contact-flex{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.contact-flex p:first-child{
+    flex: 0 0 40%;
+}
+.contact-flex p:last-child{
+    flex: 0 0 60%;
+}
+.social{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px auto 0px auto;
+}
+.social img{
+    width: 40px;
+    height: 40px;
+}
+
+/*SECTION EXP ET FORMATION*/
+.exp{
+    display: flex;
+    flex-flow: row wrap;
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.exp-info{
+    display: flex;
+    flex-flow: column wrap;
+}
+.exp-logo{
+    flex: 0 0 25%;
+    max-width: 100px;
+}
+.exp-info{
+    flex: 0 0 70%;
+    margin-left: auto;
+}
+.exp img{
+    width: 100%;
+}
+.exp h3{
+    font-size:  1.2em;
+}
+.exp h4{
+    font-size:  1em;
+    font-weight: normal;
+}
+
+/*SECTION COMPETENCES*/
+.h3gauche{
+    width: 90%;
+}
+.comp{
+    display:flex;
+    flex-flow: row wrap;
+    margin-bottom: 10px;
+}
+.comp p{
+    flex: 0 0 40%;
+}
+.conteneur-barre{
+    flex: 0 0 60%;
+    border-radius: 5px;
+    background-color: grey;
+    border-bottom: 1px ridge grey;
+}
+.barre{
+    display: block;
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.c85{
+    width: 85%;
+    background-color: #8B8;
+}
+.c90{
+    width: 90%;
+    background-color: #4B8;
+}
+.c95{
+    width: 95%;
+    background-color: #4B8;
+}
+.c100{
+    width: 100%;
+    background-color: #4B8;
+    border-radius: 5px;
+}
+.comp2{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.conteneur-barre2{
+    flex: 0 0 100%;
+    height: 0.5em;
+    margin-bottom: 0.25em;
+    border-radius: 5px;
+    background-color: grey;
+}
+
+/*SECTION INTERETS*/
+.interet{
+    flex: 0 1 50%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.interet img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px #555;
+}
+
+/*VERSION BUREAU DU CV*/
+@media screen and (min-width: 980px){
+    section{
+        width: 80%;
+        box-shadow: 0px 0px 10px #bbb;
+    }
+    a:hover{
+        color: #EA0;
+    }
+    header h1{
+        width: 80%;
+    }
+    .prez, .contact{
+        flex: 0 0 45%;
+    }
+    .prez{
+        border-bottom: none;
+        border-right: 2px solid #ccc;
+        padding-right: 20px;
+        margin-left: auto;
+    }
+    .contact{
+        padding-left: 20px;
+        margin-right: auto;
+    }
+    .prez a{
+        border: 2px solid transparent;
+    }
+    .prez a:hover{
+        color: #f28835;
+        background-color: #fff;
+        border: 2px solid #f28835;
+        box-shadow: 0px 0px 20px #666;
+    }
+    .exp-logo{
+        flex: 0 0 10%;
+    }
+    .exp-info, .exp-desc{
+        flex: 0 0 85%;
+        margin-left: auto;
+    }
+    .interet{
+        flex: 0 1 25%;
+    }
+}
+
+
+
+
+
+
+
+
+
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="cv.css">
+</head>
+<body>
+    <header>
+        <h1>CV de Zoran Tauvry</h1>
+    </header>
+    
+    <section>
+        <div class="photo">
+            <img src="https://media.licdn.com/dms/image/D5603AQEPSnV2xpM6fw/profile-displayphoto-shrink_200_200/0/1674033022239?e=1683763200&v=beta&t=t0hri5T--lI-73JdYE-orUiVauE_smGISD25722i6vs" alt="Ma photo de profil">
+        </div>
+        <div class="prez">
+            <h2>Qui suis-je ?</h2>
+            <p>Diplômé d'une Licence SARII "Système automatisé et informatique industrielle" (CY Université),je me tourne ensuite vers l'informatique et réseaux industrielle
+                mais aussi vers l'automatisme.</p>
+            <a href="#" download>Télécharger mon CV</a>
+        </div>
+        <div class="contact">
+            <h2>Informations de contact</h2>
+            <div class="contact-flex">
+                <p>Nom : </p>
+                <p>Tauvry Zoran</p>
+            </div>
+            <div class="contact-flex">
+                <p>Adresse : </p>
+                <p>6 Allée de Berne - 35200 Rennes</p>
+            </div>
+            <div class="contact-flex">
+                <p>Téléphone :</p>
+                <p>07 84 12 66 70</p>
+            </div>
+            <div class="contact-flex">
+                <p>Mail : </p>
+                <p>zorantauvry@gmail.com</p>
+                <p><a href="mailto:zorantauvry@gmail.com">zorantauvry@gmail.com</a></p>
+            </div>
+            <div class="contact-flex">
+                <p>Permis :</p>
+                <p>B</p>
+            </div>
+            <div class="social">
+                <a href="#"><img src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/fb.png" alt="Logo Fb"></a>
+                <a href="#"><img src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/tw.png" alt="Logo Tw"></a>
+                <a href="www.linkedin.com/in/zoran-tauvry-b72705169"><img src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/lk.png" alt="Logo Lk"></a>
+                <a href="#"><img src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/yt.png" alt="Logo Yt"></a>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h2>Expériences professionnelles</h2>
+        <div class="exp">
+            <div class="exp-logo">
+                <a href="#"><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.engie-solutions.com%2Ffr%2Fqui-sommes-nous&psig=AOvVaw0mhUzsYxq5LEpEpWetLqB1&ust=1682494069964000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKjvsf3AxP4CFQAAAAAdAAAAABAJ" alt="Logo de Pierre Giraud"></a>
+            </div>
+            <div class="exp-info">
+                <h3>Correspondant Téléservices Smart systems</h3>
+                <h4>Engie Solutions</h4>
+                <h4>Septembre 2022 - Aujourd'hui</h4>
+            </div>
+            <div class="exp-desc">
+                <p>Base de données, remontée d'informations via transmetteur virtuel, programmation automate 
+                    et informatique industrielle, maintenance télésystème ect.</p>
+            </div>
+        </div>
+        <div class="exp">
+            <div class="exp-logo">
+                <a href="#"><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Frennesbusinessmag.fr%2Ftransition-energetique-une-campagne-de-financement-participatif-pour-le-chauffage-urbain-rennes-nord%2F&psig=AOvVaw2r692MpcdElRI61TH2o6kc&ust=1682494791238000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNDZhtXDxP4CFQAAAAAdAAAAABAS" alt="Logo de LegalPlace"></a>
+            </div>
+            <div class="exp-info">
+                <h3>Automaticien, instruments et système</h3>
+                <h4>En'Rnov </h4>
+                <h4>Septembre 2021 - Septembre 2022</h4>
+            </div>
+            <div class="exp-desc">
+                <p>Programation des automates, remonter d'informations, traitements de données et 
+                    informatique industrielle, etc.</p>
+            </div>
+        </div>
+        <div class="exp">
+            <div class="exp-logo">
+                <a href="#"><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.fleuryloirethandball.com%2F&psig=AOvVaw2OhhFpxuVbsAW-SB5BZHUy&ust=1682495281454000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCICE-r7FxP4CFQAAAAAdAAAAABAE" alt="Logo de PrestaShop"></a>
+            </div>
+            <div class="exp-info">
+                <h3>Technicien automatisme</h3>
+                <h4>SODC Engie Cofely</h4>
+                <h4>Février 2018 - Avril 2018</h4>
+            </div>
+            <div class="exp-desc">
+                <p>Supervision, régulation et maintenance de système automatisé, électronique et commande système, ect.  .</p>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h2>Formation</h2>
+        <div class="exp">
+            <div class="exp-logo">
+                <a href="#"><img src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/edhec.png" alt="Logo EDHEC"></a>
+            </div>
+            <div class="exp-info">
+                <h3>EDHEC Programme Grande Ecole</h3>
+                <h4>2011 - 2015</h4>
+            </div>
+            <div class="exp-desc">
+                <p>blablabla</p>
+            </div>
+        </div>
+        <div class="exp">
+            <div class="exp-logo">
+                <a href="#"><img src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/dd.png" alt="Logo Dumont"></a>
+            </div>
+            <div class="exp-info">
+                <h3>Prépa ECS option Maths</h3>
+                <h4>2009 - 2011</h4>
+            </div>
+            <div class="exp-desc">
+                <p>blablabla</p>
+            </div>
+        </div>
+        <div class="exp">
+            <div class="exp-logo">
+                <a href=""><img src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/dd.png" alt=""></a>
+            </div>
+            <div class="exp-info">
+                <h3>Bac S option Maths</h3>
+                <h4>2005 - 2009</h4>
+            </div>
+            <div class="exp-desc">
+                <p>blablabla</p>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h2>Compétences</h2>
+        <h3 class="h3gauche">Professionnelles</h3>
+        <div class="comp">
+            <p>HTML / CSS</p>
+            <div class="conteneur-barre"><span class="barre c100"></span></div>
+        </div>
+        <div class="comp">
+            <p>PHP / MySQL</p>
+            <div class="conteneur-barre"><span class="barre c95"></span></div>
+        </div>
+        <div class="comp">
+            <p>JavaScript</p>
+            <div class="conteneur-barre"><span class="barre c90"></span></div>
+        </div>
+        <div class="comp">
+            <p>SEO</p>
+            <div class="conteneur-barre"><span class="barre c100"></span></div>
+        </div>
+        <h3 class="h3gauche">Personnelles</h3>
+        <div class="comp2">
+            <p>Créativité</p>
+            <p>90%</p>
+            <div class="conteneur-barre2"><span class="barre c90"></span></div>
+        </div>
+        <div class="comp2">
+            <p>Adaptation</p>
+            <p>85%</p>
+            <div class="conteneur-barre2"><span class="barre c85"></span></div>
+        </div>
+        <div class="comp2">
+            <p>Sérieux</p>
+            <p>95%</p>
+            <div class="conteneur-barre2"><span class="barre c95"></span></div>
+        </div>
+        <div class="comp2">
+            <p>Pédagogie</p>
+            <p>95%</p>
+            <div class="conteneur-barre2"><span class="barre c95"></span></div>
+        </div>
+    </section>
+    
+    <section>
+        <h2>Centres d'intérêt</h2>
+        <figure class="interet">
+            <img src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/trail.png" alt="Trail">
+            <figcaption>Trail</figcaption>
+        </figure>
+        <figure class="interet">
+            <img src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/cuisine.jpg" alt="Cuisine">
+            <figcaption>Cuisine</figcaption>
+        </figure>
+        <figure class="interet">
+            <img src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/gaming.jpg" alt="Gaming">
+            <figcaption>Jeux vidéos</figcaption>
+        </figure>
+        <figure class="interet">
+            <img src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/livre.jpg" alt="Littérature">
+            <figcaption>Littérature</figcaption>
+        </figure>
+    </section>
+    
+    <footer>
+        <p><a href="https://www.pierre-giraud.com">©Pierre Giraud</a> 2020</p>
+        <p>Reproduction à des fins commerciales interdite.</p>
+        <p>Merci de respecter le travail des auteurs en faisant un lien vers
+        le contenu original !</p>
+    </footer>
+</body>
+</html>
